@@ -1,0 +1,243 @@
+/* 初始化 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ol,li {
+    list-style: none;
+    
+}
+input {
+    border: 0;
+    outline: none;
+    user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+    -webkit-appearance:none;
+    border: none;
+    font-size: 12px
+}
+button {
+    outline: none;
+    user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+    -webkit-appearance:none;
+    border: none;
+}
+html,
+body {
+    width: 100%;
+    height: 100%
+}
+body {
+    background-color: #fafafa
+}
+
+
+/* 头部样式 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff
+}
+header .top {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #ebebeb
+}
+.top .icon-dkw_xiaoxi,.top .icon-yonghu {
+    font-size: 24px;
+}
+.userIcon,
+.messageIcon {
+    width: 60px;
+    text-align: center;
+    line-height: 50px
+}
+.search {
+    flex: 1;
+    padding: 10px 0;
+}
+.search input {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #eeeeee
+}
+.location {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    overflow: hidden
+}
+.location .refresh {
+    width: 40px;
+    height: 22px;
+    font-size: 13px;
+    border-radius: 3px
+}
+.locationText {
+    height: 100%;
+    position: relative;
+}
+.location>div {
+    height: 50px;
+    line-height: 50px;
+}
+.locationText>span {
+    display: inline-block;
+    line-height: 50px;
+    height: 50px;
+    padding-left: 24px
+}
+.locationText .icon-dibiao {
+    position: absolute;
+    display: inline-block;
+    font-size: 24px;
+}
+.resetTime>span {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    text-align: right
+}
+.resetTime {
+    padding: 10px 0;
+    color: #e9586b
+}
+
+
+/* 主体部分样式 */
+.index {
+    padding-top: 102px;
+}
+.index .indexcontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.index .indexcontent li {
+    width: 112px;
+    height: 75px;
+    background-color: #d0e8c8;
+    margin-bottom: 5px
+}
+.index .indexcontent li>a {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    font-size: 12px
+}
+.area .active {
+    background-color: #a8cdf5
+}
+
+/* 底部样式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fafafa
+}
+.footer {
+    display: flex;
+}
+.footer li {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+    border-right: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+}
+.footer li:nth-child(n+3) {
+    border-right: 0;
+}
+.footer li a {
+    color: #626262;
+    display: flex;
+    justify-content: center;
+}
+.footer .icon-dibiao,
+.footer .icon-cheliang,
+.footer .icon-tupian {
+    font-size: 26px;
+    margin-right: 10px
+}
+.footer .active {
+    color: #f98430
+}
+
+
+/* areas样式 */
+.seletedarea {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    background-color: #fff;
+    display: flex;
+    font-size: 12px
+}
+.seletedarea>div {
+    flex: 1;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+.seletedarea li {
+    text-align: center;
+    line-height: 35px;
+    border-top: 1px solid #ebebeb;
+}
+.seletedarea .areas {
+    right: 0
+}
+.seletedarea .areas li {
+    border-left: 1px solid #ebebeb;
+}
+.seletedarea .floor li {
+    border-left: 1px solid #ebebeb;
+}
+.seletedarea .active {
+    color: #f98430
+} 
+
+/* 图示样式 */
+.example {
+    background-color: #fff;
+    position: absolute;
+    bottom: 50px
+}
+.example ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #ebebeb
+}
+.example ul li {
+    width: 50%;
+    height: 30px;
+    text-align: left;
+    padding-left: 50px;
+    font-size: 13px;
+    color: #585858
+}
+.example i{
+    display: inline-block;
+    width: 35px;
+    text-align: center
+}
