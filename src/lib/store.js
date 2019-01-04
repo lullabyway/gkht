@@ -9,7 +9,8 @@ const state={   //要设置的全局访问的state对象
     currentIp:JSON.parse(window.localStorage.getItem('currentIp'))||'120.76.123.91',
     currentPort:JSON.parse(window.localStorage.getItem('currentPort'))||'9098',
     historyAddress:JSON.parse(window.localStorage.getItem('historyAddress')),
-    ipCheck:''
+    ipCheck:'',
+    loading:false
   };
 const getters = {   //实时监听state值的变化(最新状态)
    isShow(state) {  //承载变化的showFooter的值
@@ -32,6 +33,9 @@ const mutations = {
     },
     ipCheck(state,data){
         state.ipCheck=data
+    },
+    updateLoadingStatus (state, data) {
+        state.loading = data
     }
 };
 const actions = {
@@ -45,5 +49,15 @@ const actions = {
       mutations,
       actions
 });
+store.registerModule('vux', { // 名字自己定义
+    state: {
+        isLoading: false
+    },
+    mutations: {
+        updateLoadingStatus (state, payload) {
+        state.isLoading = payload.isLoading
+        }
+    }
+})
  
 export default store;

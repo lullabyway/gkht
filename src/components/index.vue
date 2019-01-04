@@ -18,6 +18,7 @@
         <div>6层K区</div>
         <div>
           <button class="refresh" @click="refresh">刷新</button>
+          
         </div>
         <div class="resetTime">
           <span>本次刷新:09:38:18</span>
@@ -131,6 +132,7 @@ export default {
     refresh(){
       //刷新车场泊位列表
       let vm = this;
+      // vm.$router.push('/test')
       vm.$axios
         .post("/getBerthLockerList")
         .then(function(response) {
@@ -139,6 +141,8 @@ export default {
           let lockerCodelist = data.data;
           vm.$store.commit("lockerCodelist", lockerCodelist);
            console.log('刷新')
+          vm.$router.push('/emptyPage')
+           
         })
         .catch(function(error) {
           console.log(error);

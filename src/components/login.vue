@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="login" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="加载中">
         <div class="carIcon">
             <i class="iconfont icon-cheliang1"></i>
         </div>
@@ -23,7 +23,8 @@ export default {
   data: function() {
     return {
       user: "admin",
-      password: 123456
+      password: 123456,
+      fullscreenLoading :false
     };
   },
   methods: {
@@ -49,11 +50,16 @@ export default {
     if (from.path.indexOf("/updataip") != -1) {
       console.log("updata");
       next(vm => {
+        vm.fullscreenLoading=true
         vm.$router.go(0);
+        
       });
     } else {
       next();
     }
+  },
+  mounted(){
+    this.fullscreenLoading=false 
   }
 };
 </script>

@@ -14,8 +14,8 @@ import message from '../components/message.vue';
 import areadetail from '../components/areadetail.vue';
 import updatapsw from '../components/updatapsw.vue';
 import updataip from '../components/updataip.vue';
-import emptyPage from '../components/emptyPage.vue'
-
+import emptyPage from '../components/emptyPage.vue';
+import test from '../components/test.vue'
 const router = new VueRouter({
   routes: [
     {
@@ -104,6 +104,20 @@ const router = new VueRouter({
        meta: {
         login_require: true
       }
+    },
+    {
+      path: '/emptyPage',
+       component: emptyPage,
+       meta: {
+        login_require: true
+      }
+    },
+    {
+      path: '/test',
+       component: test,
+       meta: {
+        login_require: false
+      }
     }
   ]
 })
@@ -124,20 +138,8 @@ router.beforeEach((to, from, next) => {
 })
 
 
-// router.beforeEach((to, from, next) => {
-//   console.log(0)
-//   const nextRouter=['index','user','message','areadetail','updatapsw','updataip'];
-//   let isLogin=JSON.stringify(sessionStorage.getItem("login"))
-//   if (nextRouter.indexOf(to.path) !=-1) {
-//     console.log(1)
-//      if(isLogin=='login'){
-//       console.log(1)
-//         next()
-//      }else {
-//       router.push('/login')
-//     }
-//   }else{
-//     next()
-//   }
+
+// router.afterEach( (to)=> {
+//   store.commit('updateLoadingStatus', {loading: false})
 // })
 export default router;

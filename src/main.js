@@ -1,14 +1,20 @@
+import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App.vue'
 
-import "./assets/css/commom.css";
-import "./assets/font/iconfont.css";
+import "./assets/css/commom.css"
+import "./assets/font/iconfont.css"
 
 import 'lib-flexible/flexible.js'
 import store from './lib/store'
 import router from './lib/router'
 import './lib/element-ui.js'
-import axios from "axios";
+import axios from "axios"
+
+
+import Loading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/vue-loading.css'
+Vue.use(Loading)
 
 
 Vue.prototype.$axios = axios;

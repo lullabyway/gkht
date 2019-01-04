@@ -10,11 +10,11 @@ export default {
         })
     },
     created(){
-        this.$router.go(0);
+        // this.$router.go(0);
         
     },
     mounted(){
-        this.$router.replace('./updataip')
+        this.$router.go(-1)
     }
     // beforeRouteEnter(to, from, next) {
     //     next(vm => {

@@ -2,7 +2,6 @@
   <div id="app">
     <!-- 路由 -->
     <router-view></router-view>
-
   </div>
 </template>
 
@@ -11,7 +10,7 @@ export default {
   name: "app",
   data: function() {
     return {
-      
+
     };
   },
   methods: {
@@ -103,6 +102,7 @@ export default {
         });
     }
   },
+  
   created() {
     this.getParkBerthList();
     this.initsocket()
